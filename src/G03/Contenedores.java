@@ -1,3 +1,4 @@
+//MIGUEL ÁNGEL BALLESTEROS PERONA
 package G03;
 
 public class Contenedores{
@@ -6,9 +7,9 @@ public class Contenedores{
     private String pais_procedencia;
     private boolean inspeccion;
     private int prioridad;
-    private char [] descripcion=new char [100];
-    private char [] empresa_envio=new char [20];
-    private char [] empresa_recibe=new char [20];
+    private char [] descripcion;
+    private char [] empresa_envio;
+    private char [] empresa_recibe;
 
     public Contenedores(int identificador, int peso, String pais_procedencia, boolean inspeccion, int prioridad, char [] descripcion, char [] empresa_envio, char [] empresa_recibe){
         this.identificador=identificador;
@@ -54,7 +55,7 @@ public class Contenedores{
     }
 
     public void setEmpresa_envio(char[] empresa_envio) {
-        this.empresa_envio = empresa_envio;
+            this.empresa_envio=empresa_envio;
     }
 
     public void setEmpresa_recibe(char[] empresa_recibe) {
@@ -81,7 +82,7 @@ public class Contenedores{
         return prioridad;
     }
 
-    public char[] getDescripcion() {
+    public char [] getDescripcion() {
         return descripcion;
     }
 
@@ -95,7 +96,7 @@ public class Contenedores{
     public String toString(){
         return "La información de este contenedor es:\n"+"-identificador: "+identificador+
                 "\n -peso: "+peso+"\n -pais:"+pais_procedencia+"\n -¿ha sido inspeccionado? "+inspeccion+"\n-descripcion: "
-                +descripcion +"\n-empresa que lo envia: "+empresa_envio
-                +"\n -empresa que lo va a recibir:"+empresa_recibe;
+                +descripcion.toString() +"\n-empresa que lo envia: "+empresa_envio.toString()
+                +"\n -empresa que lo va a recibir:"+empresa_recibe.toString();
     }
 }

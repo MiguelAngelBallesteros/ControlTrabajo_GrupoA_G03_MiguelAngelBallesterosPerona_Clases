@@ -1,3 +1,4 @@
+//MIGUEL ÁNGEL BALLESTEROS PERONA
 package G03;
 
 public class Puerto {
@@ -43,6 +44,13 @@ public class Puerto {
         StringBuilder constructor = new StringBuilder();
         for (int i = 0; i < 3; i++) {
             constructor.append(Puerto[i].contenedores_pais(Pais));
+        }
+        return constructor.toString();
+    }
+    public String Busca(int id){
+        StringBuilder constructor = new StringBuilder();
+        for (int i = 0; i < 3; i++) {
+            constructor.append(Puerto[i].buscacont(id));
         }
         return constructor.toString();
     }

@@ -1,3 +1,4 @@
+//MIGUEL ÁNGEL BALLESTEROS PERONA
 package G03;
 
 import java.util.Objects;
@@ -104,5 +105,16 @@ public class Hub {
             }
         }
         return 0;
+    }
+    public String buscacont (int prioridad){
+        StringBuilder cont=new StringBuilder();
+        for(int i=0;i<12;i++){
+                if(this.c[9][i]!=null && this.c[9][i].getPrioridad()==prioridad){
+                    cont.append("ID: "+this.c[9][i].getIdentificador()+"\n"+"Empresa Remitente: "+this.c[9][i].getEmpresa_envio()+"\n"+"Peso: "+this.c[9][i].getPeso()+"\n"+"Estado chequeo Aduana: "+this.c[9][i].isInspeccion());
+                }
+            }
+        cont.append("\n");
+        System.out.println(cont);
+        return cont.toString();
     }
 }
